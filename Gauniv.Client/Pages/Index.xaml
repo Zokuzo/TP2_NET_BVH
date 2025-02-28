@@ -8,6 +8,7 @@
              Title="Index"
              x:DataType="vm:IndexViewModel"
              BindingContext="{vm:IndexViewModel}">
+    
     <!-- 
             A vous de créer la liste avec le bon binding. Une <ListBox>, une <CollectionView> ou autre fera l'affaire 
             La propriété ItemsSource doit pointé vers la propiété Books de votre dataContext actuelle 
@@ -21,5 +22,6 @@
             Command="{Binding DataContext.ItemSelectedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}" 
             CommandParameter="{Binding .}"
     -->
-    <Label Text="List des jeux" />
+
+    <Label Text="Index"/>
 </ContentPage>
