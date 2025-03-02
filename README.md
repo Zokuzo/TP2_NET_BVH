@@ -93,7 +93,7 @@ Votre solution devra être basée sur le projet **Library.sln**.
 
 #### Modèle de données
 
-## 🚀 Important : Lancement correct du projet avec Docker & PostgreSQL
+## 🚀 Important : Lancement correct du Projet :
 
 Pour que le projet fonctionne correctement, un simple `docker-compose up` ne suffit pas !
 
