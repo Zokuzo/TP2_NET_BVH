@@ -118,9 +118,9 @@ Sachant que :
 #### Administration
 
 -  Un administrateur peut :
-  - [ ]  Ajouter des jeux
+  - [x]  Ajouter des jeux
   - [x]  Supprimer des jeux
-  - [ ]  Modifier un jeu
+  - [x]  Modifier un jeu
   - [ ]  Ajouter de nouvelles catégories
   - [ ]  Modifier une catégorie
   - [x]  Supprimer une catégorie
