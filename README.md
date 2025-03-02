@@ -118,11 +118,11 @@ Sachant que :
 #### Administration
 
 -  Un administrateur peut :
-  - [x]  Ajouter des jeux
+  - [ ]  Ajouter des jeux
   - [x]  Supprimer des jeux
   - [ ]  Modifier un jeu
-  - [x]  Ajouter de nouvelles catégories
-  - [x]  Modifier une catégorie
+  - [ ]  Ajouter de nouvelles catégories
+  - [ ]  Modifier une catégorie
   - [x]  Supprimer une catégorie
 
 -  Un utilisateur peut :
