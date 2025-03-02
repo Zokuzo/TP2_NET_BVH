@@ -129,10 +129,10 @@ Sachant que :
   - [x]  Consulter la liste des jeux possédés
   - [x]  Acheter un nouveau jeu
   - [x]  Voir les jeux possédés
-  - [ ]  Consulter la liste des autres joueurs inscrits et leurs statuts en temps réel
+  - [x]  Consulter la liste des autres joueurs inscrits (et leurs statuts en temps réel. Non fonctionnel) 
 
 -  Tout le monde peut :
-  - [ ]  Consulter la liste de tous les jeux (avec filtrage par nom, prix, catégorie, etc.)
+  - [x]  Consulter la liste de tous les jeux (avec filtrage par nom, prix, catégorie (pas complètemen fonctionnel), etc.)
   - [x]  Consulter la liste de toutes les catégories
 
 #### API REST
