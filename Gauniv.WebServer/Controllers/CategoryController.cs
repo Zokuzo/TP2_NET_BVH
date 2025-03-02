@@ -65,7 +65,6 @@ namespace Gauniv.WebServer.Controllers
             return View(category);
         }
 
-        // POST: Category/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Game.Category category)
@@ -77,7 +76,7 @@ namespace Gauniv.WebServer.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Entry(category).State = EntityState.Modified; // Ajout du suivi manuel
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -91,6 +90,8 @@ namespace Gauniv.WebServer.Controllers
             }
             return View(category);
         }
+
+
 
         // GET: Category/Delete/5
         public async Task<IActionResult> Delete(int? id)

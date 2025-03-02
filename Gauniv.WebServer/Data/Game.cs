@@ -43,7 +43,7 @@ namespace Gauniv.WebServer.Data
             [MaxLength(100)]
             public string Name { get; set; }
 
-            public List<Game> Games { get; set; } // Liste des jeux associés à la catégorie
+            public List<Game>? Games { get; set; }// Liste des jeux associés à la catégorie
         }
     }
 }
