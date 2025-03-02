@@ -93,6 +93,26 @@ Votre solution devra être basée sur le projet **Library.sln**.
 
 #### Modèle de données
 
+## 🚀 Important : Lancement correct du projet avec Docker & PostgreSQL
+
+Pour que le projet fonctionne correctement, un simple `docker-compose up` ne suffit pas !
+
+Lors du premier lancement, Docker démarre les containers, y compris la base de données PostgreSQL, mais aucune donnée n'est ajoutée immédiatement. Voici les étapes à suivre pour éviter ce problème :
+
+1️⃣ Lancer Docker Compose :
+   
+    docker-compose
+   Cela démarre tous les services, y compris la base de données et ses réplicas.
+
+2️⃣ Attendre quelques secondes que tous les containers soient bien en place.
+
+3️⃣ Relancer le projet en local via Visual Studio en exécutant l’option "WebServer".
+
+4️⃣ Lors de ce deuxième lancement, les données seront injectées dans PostgreSQL, et le projet fonctionnera correctement.
+
+⚠️ **Attention** : Si cette étape est ignorée, la base de données restera vide et le projet ne fonctionnera pas correctement.
+
+
 #### POUR FAIRE LA MIGRATION FAIRE Add-Migration <nom-de-la-migration> à chaque modification du modèle de donnée.
 
 - [x]  Stocker une liste des jeux accessibles.
@@ -121,8 +141,8 @@ Sachant que :
   - [x]  Ajouter des jeux
   - [x]  Supprimer des jeux
   - [x]  Modifier un jeu
-  - [ ]  Ajouter de nouvelles catégories
-  - [ ]  Modifier une catégorie
+  - [x]  Ajouter de nouvelles catégories
+  - [x]  Modifier une catégorie
   - [x]  Supprimer une catégorie
 
 -  Un utilisateur peut :
