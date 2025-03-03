@@ -7,7 +7,7 @@
              Title="GameDetails"
              BindingContext="{vm:GameDetailsViewModel}"
              x:DataType="vm:GameDetailsViewModel">
-    <Label Text="Game details" />
+    
     <!-- 
     On veut afficher le detail d'un jeu: nom, description
     si il est possédé
@@ -15,4 +15,54 @@
         si il est en cours de téléchargement, si il est en cours de jeu, si il est installé
     - si non le prix et la possibilité d'achat
     -->
+    <StackLayout>
+        <Label Text="{Binding SelectedGame.Id}"/>
+        <Label Text="{Binding SelectedGame.Name}" FontSize="24"/>
+        <Label Text="{Binding SelectedGame.Description}" FontSize="14"/>
+        <Button>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Text" Value="Installer" />
+                    <Setter Property="Command" Value="{Binding InstallGameDetailsCommand}" />
+                    <Setter Property="BackgroundColor" Value="Green"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsInstalled}" Value="False" TargetType="Button">
+                            <Setter Property="Text" Value="Installer"/>
+                            <Setter Property="Command" Value="{Binding InstallGameDetailsCommand}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsInstalled}" Value="True" TargetType="Button">
+                            <Setter Property="Text" Value="Jouer"/>
+                            <Setter Property="Command" Value="{Binding PlayGameDetailsCommand}"/>
+                            <Setter Property="BackgroundColor" Value="DarkBlue"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsStarted}" Value="True" TargetType="Button">
+                            <Setter Property="Text" Value="Stop" />
+                            <Setter Property="Command" Value="{Binding StopGameDetailsCommand}"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Text" Value="Désinstaller"/>
+                    <Setter Property="Command" Value="{Binding UninstallGameDetailsCommand}"/>
+                    <Setter Property="Background" Value="Gray"/>
+                    <Setter Property="IsEnabled" Value="False"/>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsInstalled}" Value="True" TargetType="Button">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsStarted}" Value="True" TargetType="Button">
+                            <Setter Property="Background" Value="Grey"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </StackLayout>
 </ContentPage>

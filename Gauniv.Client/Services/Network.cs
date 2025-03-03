@@ -16,12 +16,13 @@ namespace Gauniv.Client.Services
 
         public static NetworkService Instance { get; private set; } = new NetworkService();
         [ObservableProperty]
-        private string token;
+        private string token = "aaaa";
         public HttpClient httpClient;
 
         public NetworkService() {
             httpClient = new HttpClient();
-            Token = null;
+            //Token = null;
+            OnConnected?.Invoke();
         }
 
         public event Action OnConnected;
