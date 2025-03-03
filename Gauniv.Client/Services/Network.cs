@@ -26,6 +26,26 @@ namespace Gauniv.Client.Services
         }
 
         public event Action OnConnected;
+        public async Task<HttpResponseMessage> GetAsync(string endpoint)
+        {
+            try
+            {
+                // Ajouter le token à l'en-tête si présent
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+
+                string url = $"https://api.example.com{endpoint}"; // Remplace par l'URL de base de ton API
+                var response = await httpClient.GetAsync(url);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de l'appel GET : " + ex.Message);
+                return null;
+            }
+        }
 
     }
 }

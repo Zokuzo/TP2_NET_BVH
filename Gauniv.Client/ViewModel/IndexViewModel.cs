@@ -13,11 +13,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.VoiceCommands;
 using Gauniv.Client.Model;
+using Gauniv.WebServer.Dtos;
+using Gauniv.WebServer.Api;
 
 namespace Gauniv.Client.ViewModel
 {
     public partial class IndexViewModel : ObservableObject
     {
+        private readonly GameService _gameService;
+        public ObservableCollection<string> Games { get; set; } = new ObservableCollection<string>();
+
+        public AsyncRelayCommand LoadGamesCommand { get; }
+
+        public IndexViewModel()
+        {
+            
+        }
 
     
     }

@@ -23,5 +23,17 @@
             CommandParameter="{Binding .}"
     -->
 
-    <Label Text="Index"/>
+    <StackLayout>
+        <Label Text="Games" FontSize="32" HorizontalOptions="Center" />
+
+        <CollectionView ItemsSource="{Binding Games}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5">
+                        <Label Text="{Binding .}" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

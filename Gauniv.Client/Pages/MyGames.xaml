@@ -16,7 +16,7 @@
                 <StackLayout Padding="10">
                     <Label Text="{Binding Id}" FontSize="20"/>
                     <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold"/>
-                    <Button Text="Test click" 
+                    <Button Text="Détail" 
         Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MyGamesViewModel}}, Path=GoToDetailsCommand}"
         CommandParameter="{Binding}" />
                 </StackLayout>

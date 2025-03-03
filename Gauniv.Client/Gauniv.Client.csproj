@@ -78,6 +78,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Gauniv.Network\Gauniv.Network.csproj" />
+	  <ProjectReference Include="..\Gauniv.WebServer\Gauniv.WebServer.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

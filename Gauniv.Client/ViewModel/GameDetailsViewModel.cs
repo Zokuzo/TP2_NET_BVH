@@ -41,7 +41,7 @@ namespace Gauniv.Client.ViewModel
         {
             if (SelectedGame != null)
             {
-                _gameService.UninstallGame(SelectedGame.Name);
+                _gameService.UninstallGame(SelectedGame.Id);
                 OnPropertyChanged(nameof(IsInstalled));
                 OnPropertyChanged(nameof(IsStarted));
             }
@@ -52,7 +52,7 @@ namespace Gauniv.Client.ViewModel
         {
             if (SelectedGame != null )
             {
-                _gameService.DownloadGame(SelectedGame.Name);
+                _gameService.DownloadGame(SelectedGame.Id);
                 OnPropertyChanged(nameof(IsInstalled));
                 OnPropertyChanged(nameof(IsStarted));
 
